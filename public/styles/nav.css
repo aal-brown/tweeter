@@ -1,0 +1,28 @@
+#top-bar {
+  position: fixed;
+  height: 120px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #4056A1;
+  color: #ffffff
+
+}
+
+/*The selector below applies to BOTH span elements in the top bar, it is for saving some code, so i'm not repeating myself.
+*/
+/* Span defaults to in-line, so a display property isn't required here 
+specifing the padding generically, without left, right, etc, will apply it evenly everywhere.*/
+span.top-bar {
+  padding: 1.5em;
+}
+
+#logo {
+  float: left;
+  font-family: "Bungee", sans-serif;
+}
+
+#tweet {
+  float: right;
+}

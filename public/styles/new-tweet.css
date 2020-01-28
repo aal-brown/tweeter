@@ -1,0 +1,38 @@
+#tweet-header {
+  margin: 15px 0;
+}
+
+
+[name="text"] {
+  display: block; /* gets the other elements away from it, by having it take up the width */
+  margin: 0 auto; /* This centers the element */
+  width: 100%;
+  border: transparent;
+  border-bottom: solid; /* Overwrites the above transparent */
+  border-color:#545149;
+  color: #545149;
+  border-width: 4px;
+  background-color: #f4f1ec;
+  margin-bottom: 20px; /* margin was the only way to move the lower elements */
+  font-size: 40px;
+  font-family: "Source Sans Pro: 700", sans-serif
+}
+
+#tweet-button {
+  font-family: "Bungee", sans-serif;
+  border-style: none;
+  background-color:#4056A1;
+  float: left;
+  color: #ffffff
+}
+
+.counter {
+  float: right;
+  font-family: "Bungee", sans-serif;
+}
+
+::placeholder {
+  opacity: 1;
+  color:#545149;
+
+}
