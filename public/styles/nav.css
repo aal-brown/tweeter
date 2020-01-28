@@ -1,5 +1,8 @@
 #top-bar {
+  display: flex;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   top: 0;
   right: 0;
@@ -19,10 +22,8 @@ span.top-bar {
 }
 
 #logo {
-  float: left;
   font-family: "Bungee", sans-serif;
 }
 
 #tweet {
-  float: right;
 }
