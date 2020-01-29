@@ -23,6 +23,9 @@
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
@@ -40,7 +43,7 @@
     <span id="logo" class="top-bar">tweeter</span>
     <span id="tweet" class="top-bar"><b>Write</b> a new tweet</span>
   </nav>
-  <header>
+  <header id="page">
     <div >
         <img id="profile-img" src="/images/profile-hex.png"> 
     </div>
@@ -48,23 +51,37 @@
     <div>
         <span id="name"><b>Adlai</b> Brown</span>
     </div>
-</header>
+  </header id="page">
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2 id="tweet-header">Compose Tweet</h2>
-      <form method="POST" action="/tweets">
+      <!-- <h2 id="tweet-header">Compose Tweet</h2> -->
+      <form id="tweet-form" method="POST" action="/tweets">
         <textarea name="text" placeholder="What are you humming about?" rows="1"></textarea>
-        <input id="tweet-button" type="submit" value="Tweet">
+        <div name="button-and-counter">
+          <input id="tweet-button" type="submit" value="Tweet">
         <span class="counter">140</span>
+      </div>
       </form>
     </section>
-    <div name="main-text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+    <section id="tweets-container">
+      <article class="tweets">
+        <header>
+          <div class="img-name">
+            <img src="https://i.imgur.com/73hZDYK.png">
+            <span class="name tweets">Newton</span>
+          </div>
+          <span class="username tweets">@SirIsaac</span>
+        </header>
+          <p><b>This is the tweet</b></p>
+        <footer>
+          <span class="time tweets">10 days ago</span>
+          <span class="tweet tweets">W X Y Z</span>
+        </footer>
+      </article>
+    </section>
   </main>
+  <script src="/scripts/composer-char-counter.js"></script>
 </body>
 
 </html>

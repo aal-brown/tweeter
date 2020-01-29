@@ -1,11 +1,7 @@
-#tweet-header {
-  margin: 15px 0;
-}
-
 
 [name="text"] {
   display: block; /* gets the other elements away from it, by having it take up the width */
-  margin: 0 auto; /* This centers the element */
+   /* This centers the element */
   width: 100%;
   border: transparent;
   border-bottom: solid; /* Overwrites the above transparent */
@@ -18,16 +14,21 @@
   font-family: "Source Sans Pro: 700", sans-serif
 }
 
+
+[name="button-and-counter"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #tweet-button {
   font-family: "Bungee", sans-serif;
   border-style: none;
   background-color:#4056A1;
-  float: left;
   color: #ffffff
 }
 
 .counter {
-  float: right;
   font-family: "Bungee", sans-serif;
 }
 
@@ -35,4 +36,9 @@
   opacity: 1;
   color:#545149;
 
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
 }

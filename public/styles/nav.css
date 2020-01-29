@@ -10,19 +10,19 @@
   z-index: 1030;
   background-color: #4056A1;
   color: #ffffff
-
 }
 
 /*The selector below applies to BOTH span elements in the top bar, it is for saving some code, so i'm not repeating myself.
 */
 /* Span defaults to in-line, so a display property isn't required here 
 specifing the padding generically, without left, right, etc, will apply it evenly everywhere.*/
-span.top-bar {
-  padding: 1.5em;
+.top-bar {
+  padding: 36px;
 }
 
 #logo {
   font-family: "Bungee", sans-serif;
+  font-size: 40px;
 }
 
 #tweet {
