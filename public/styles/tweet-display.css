@@ -1,15 +1,22 @@
+
+#tweets-container {
+width: 100%;
+}
+
 article.tweets {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   border: solid;
-  border-width: 4px;
+  border-width: 0.1em;
   border-color: #545149;
-  border-radius: 15px;
-  margin-top: 32px;
-  height: 300px;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  height: 10em;
   opacity: 30%;
+
 }
 
 /* Responding to mouse-over */
@@ -25,19 +32,19 @@ article.tweets:hover .username {
 
 
 article.tweets header  {
-  height: 110px;
+  height: 4em;;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding:25px;
+  padding:1em;
 }
 
 .tweets p {
   width: 95%;
   text-align: left;
-  font-size: 30px;
+  font-size: 0.5em;
 }
 
 .img-name {
@@ -49,7 +56,7 @@ article.tweets header  {
 .img-name img {
   max-height: 100%;
   width: auto;
-  padding-right: 5px;
+  padding-right: 0.25em;
 }
 
 .username {

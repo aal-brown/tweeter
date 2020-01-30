@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+  #page-header {
+    width:100%;
+    margin-bottom: 1em;
+  }
+
+  #contents {
+    width: 100%;
+  }
+}

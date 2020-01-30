@@ -5,45 +5,17 @@
  */
 
 $(document).ready(() => {
-  // console.log("I\'m ready");
-
-  //Tweet data to load into the page
-/*   const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]; */
 
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
-
-
+  };
 
   //Function to computer the elapsed time since tweet creation
   const timeElapsed = function(tweetObj) {
-    let timeEl = ((Number(Date.now()) - Number(tweetObj.created_at)) / 1000); //Date.now() returns the current Date() as usual, but as a string of digits rather than a formatted date.
+    let timeEl = ((Number(Date.now()) - Number(tweetObj.created_at)) / 1000);
+
     let timeElStr = "";
     
     if (timeEl >= 31536000) {
@@ -87,30 +59,16 @@ $(document).ready(() => {
     </footer>
     </article>
   `;
-
     return tweetTemplate;
-
   };
 
 
-  //Function that initiates the creation of the html for each tweet and then appends it to the page html.
+  //Function that initiates the creation of the html for each tweet and then prepends it to the page html.
   const renderTweets = function(tweetsObjArr) {
     tweetsObjArr.forEach((value) => {
-      $("#tweets-container").append(createTweetElement(value));
+      $("#tweets-container").prepend(createTweetElement(value));
     });
   };
-
-  //renderTweets(data);
-
-
-
-
-  // AJAX post method to submit new tweet and store in the tweet database without redirecting the page.
-
-/* const postTweetToServer = function(event) {
-  let data = $(this).val()
-
-} */
 
 
   const loadTweets = function() {
@@ -130,15 +88,13 @@ $(document).ready(() => {
     $("section.error-messages").slideDown();
     setTimeout(slideUp,2000);
     para.html(message);
-  }
+  };
 
-/* When you have time turn this into a standalone function in a handlers.js file */
+
   $("#tweet-form").on("submit", function(event) {
 
     event.preventDefault();
-    //Here we receive the data, but we must serialize it for submission via the HTTP post request. It will simply exist as a regular string otherwise.
 
-    /* let para = $("div.error-messages > p"); */
     let data = $("[name='text']").val();
 
     if (data === "" || data === null) {
@@ -175,8 +131,3 @@ $(document).ready(() => {
   $("#tweet input").on("click", toggleTweet);
 
 });
-
-
-
-//When an error is triggered, slide the error box into view and insert the error text.
-

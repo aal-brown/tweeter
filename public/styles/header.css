@@ -2,15 +2,17 @@
 Since it is a block element, left and right probably aren't required for specifying the box-offset. Block elements by default fill the width of the page I think.
  */
 #page-header {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 120px;
+  width: 45%;
   height: 400px;
-  background-color: #40b6ca;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  /* background-color: #40b6ca; */
+  background-image: url("https://hbimg.huabanimg.com/15fa28bef6214099169cf5b55ed920f0a6e37158147b1-NhAjzT_fw658");
+  background-repeat: no-repeat;
+  background-size: cover ;
+
   font-family: "Source Sans Pro", sans-serif
 }
 

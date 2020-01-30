@@ -1,22 +1,21 @@
 
 #new-tweet {
-margin-top: 100px;
 display: none;
+width: 100%;
 }
 
 
 [name="text"] {
   display: block; /* gets the other elements away from it, by having it take up the width */
-  
   width: 100%;
   border: transparent;
   border-bottom: solid; /* Overwrites the above transparent */
   border-color:#545149;
   color: #545149;
-  border-width: 4px;
+  border-width: 0.1em;
   background-color: #f4f1ec;
-  margin-bottom: 20px; /* margin was the only way to move the lower elements */
-  font-size: 40px;
+  margin-bottom: 0.5em; /* margin was the only way to move the lower elements */
+  font-size: 2em;
   font-family: "Source Sans Pro: 700", sans-serif
 }
 
