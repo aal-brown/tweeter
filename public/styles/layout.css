@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  overflow: auto;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -26,7 +27,6 @@ body {
   top: 550px;
   left: 5%;
   right: 5%;
-  
 }
 
 [name="main-text"] {

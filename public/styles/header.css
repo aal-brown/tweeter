@@ -1,27 +1,20 @@
 /*  we relatively position the header to the page (since that is its parent element) and use 120px to match the height of the nav bar, thus not overlapping it.
 Since it is a block element, left and right probably aren't required for specifying the box-offset. Block elements by default fill the width of the page I think.
  */
-#page {
+#page-header {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   top: 120px;
   height: 400px;
-  background-color: #d89820;
+  background-color: #40b6ca;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   font-family: "Source Sans Pro", sans-serif
 }
 
-
-#profile-img {
- 
-}
-
 #name {
-  
- 
   color: #ffffff;
   font-size: 50px;
 }

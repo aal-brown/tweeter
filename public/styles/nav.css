@@ -9,14 +9,14 @@
   left: 0;
   z-index: 1030;
   background-color: #4056A1;
-  color: #ffffff
+  color: #ffffff;
 }
 
 /*The selector below applies to BOTH span elements in the top bar, it is for saving some code, so i'm not repeating myself.
 */
 /* Span defaults to in-line, so a display property isn't required here 
 specifing the padding generically, without left, right, etc, will apply it evenly everywhere.*/
-.top-bar {
+#top-bar {
   padding: 36px;
 }
 
@@ -26,4 +26,37 @@ specifing the padding generically, without left, right, etc, will apply it evenl
 }
 
 #tweet {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+
+#tweet input {
+  margin-top: 5px;
+  height: 70%;
+  width: auto;
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#tweet input:hover {
+  height: 80%;
+  width: auto;
+}
+
+@keyframes moveUpDown {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

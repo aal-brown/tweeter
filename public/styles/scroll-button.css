@@ -1,0 +1,36 @@
+#scroll-button {
+  display: none;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  bottom: 26px;
+  right: 36px;
+  z-index: 99;
+  border: none;
+  border-radius: 50%;
+  background-color: #4056a0;
+  animation: moveUpDown 3s linear infinite;
+}
+
+#scroll-button:hover {
+  height: 110px;
+  width: 110px;
+} 
+
+#scroll-button > img {
+height: 60%;
+width: 60%;
+}
+
+
+@keyframes moveUpDown {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

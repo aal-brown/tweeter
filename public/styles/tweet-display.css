@@ -6,13 +6,17 @@ article.tweets {
   border: solid;
   border-width: 4px;
   border-color: #545149;
+  border-radius: 15px;
   margin-top: 32px;
   height: 300px;
+  opacity: 30%;
 }
 
+/* Responding to mouse-over */
 article.tweets:hover {
- box-shadow: 6px 6px grey;
+ box-shadow: 10px 10px 5px grey;
  text-shadow: 0.5px 0.5px #545149;
+ opacity: 100%;
 }
 
 article.tweets:hover .username {
@@ -66,7 +70,5 @@ article.tweets footer  {
   border-color:#545149;
   color: #545149;
   border-width: 4px;
- 
   padding:16px;
-
 }

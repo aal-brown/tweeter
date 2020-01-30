@@ -1,7 +1,13 @@
 
+#new-tweet {
+margin-top: 100px;
+display: none;
+}
+
+
 [name="text"] {
   display: block; /* gets the other elements away from it, by having it take up the width */
-   /* This centers the element */
+  
   width: 100%;
   border: transparent;
   border-bottom: solid; /* Overwrites the above transparent */
@@ -23,9 +29,17 @@
 
 #tweet-button {
   font-family: "Bungee", sans-serif;
-  border-style: none;
+  border-style: solid;
   background-color:#4056A1;
-  color: #ffffff
+  color: #ffffff;
+  padding: 6px
+}
+
+#tweet-button:hover {
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  box-shadow: 0 0 0 2px #8095f3, 0 0 1px rgba(0, 0, 0, 0);
+}
 }
 
 .counter {
@@ -38,7 +52,7 @@
 
 }
 
-.new-tweet {
+/* .new-tweet {
   display: flex;
   flex-direction: column;
-}
+} */

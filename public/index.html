@@ -5,6 +5,11 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
+  <!-- Favicon -->
+  <link rel="icon" 
+      type="image/png" 
+      href="https://img.icons8.com/officel/16/000000/bird.png">
+
   <!-- Reset CSS -->
   <link rel="stylesheet" href="/styles/reset.css" type="text/css" />
 
@@ -13,19 +18,12 @@
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-  <!-- App CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-  <!-- App CSS -->
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
-  <!-- App CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
-
+  <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/errors.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/scroll-button.css" type="text/css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
@@ -33,29 +31,39 @@
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+
 </head>
 
 <body>
+
   <!-- Top nav bar (fixed) -->
   <nav id="top-bar">
     <span id="logo" class="top-bar">tweeter</span>
-    <span id="tweet" class="top-bar"><b>Write</b> a new tweet</span>
+  <div id="tweet">
+    <span class="top-bar"><b>Write</b> a new tweet</span>
+    <input class="top-bar" type="image" src="/images/arrow.png"></input>
+  </div>
   </nav>
-  <header id="page">
-    <div >
+
+  <!-- Main page header -->
+  <header id="page-header">
+    <div>
         <img id="profile-img" src="/images/profile-hex.png"> 
     </div>
     <br>
     <div>
         <span id="name"><b>Adlai</b> Brown</span>
     </div>
-  </header id="page">
+  </header id="page-header">
+
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
-      <!-- <h2 id="tweet-header">Compose Tweet</h2> -->
+    <section class="error-messages">
+      <div class="error-messages">
+      <p></p>
+      </div>
+    </section>
+    <section id="new-tweet">
       <form id="tweet-form" method="POST" action="/tweets">
         <textarea name="text" placeholder="What are you humming about?" rows="1"></textarea>
         <div name="button-and-counter">
@@ -65,7 +73,7 @@
       </form>
     </section>
     <section id="tweets-container">
-      <article class="tweets">
+    <!--     <article class="tweets">
         <header>
           <div class="img-name">
             <img src="https://i.imgur.com/73hZDYK.png">
@@ -78,10 +86,16 @@
           <span class="time tweets">10 days ago</span>
           <span class="tweet tweets">W X Y Z</span>
         </footer>
-      </article>
+      </article> -->
     </section>
+
+    <button id="scroll-button"><img src="/images/arrow-up.png"></img></button>
+
   </main>
-  <script src="/scripts/composer-char-counter.js"></script>
+   <!-- App JS -->
+   <script src="/scripts/client.js"></script>
+   <script src="/scripts/composer-char-counter.js"></script>
+   <script src="/scripts/button-scroll.js"></script>
 </body>
 
 </html>
