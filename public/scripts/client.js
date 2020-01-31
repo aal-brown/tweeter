@@ -6,6 +6,7 @@
 
 $(document).ready(() => {
 
+  //Escape function to protect against script injection
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -36,7 +37,6 @@ $(document).ready(() => {
     } else if (timeEl < 60) {
       timeElStr += `0 min `;
     }
-
     return timeElStr + "ago";
   };
 
@@ -64,13 +64,16 @@ $(document).ready(() => {
 
 
   //Function that initiates the creation of the html for each tweet and then prepends it to the page html.
+  let tweetsContainer = $("#tweets-container");
   const renderTweets = function(tweetsObjArr) {
+    tweetsContainer.empty();
     tweetsObjArr.forEach((value) => {
-      $("#tweets-container").prepend(createTweetElement(value));
+      $("#tweets-container").append(createTweetElement(value));
     });
   };
 
 
+  //This function is used within the main post function to get the tweets and display them on the page.
   const loadTweets = function() {
     $.ajax({
       url: "/tweets",
@@ -80,6 +83,7 @@ $(document).ready(() => {
     });
   };
 
+  //Function to implement the sliding of and text within the error messages
   const errorMessages = function(message) {
     let para = $("div.error-messages > p");
     const slideUp = function() {
@@ -91,8 +95,8 @@ $(document).ready(() => {
   };
 
 
+  //This is the main function for posting new tweets and then getting the tweet data object.
   $("#tweet-form").on("submit", function(event) {
-
     event.preventDefault();
 
     let data = $("[name='text']").val();
@@ -120,6 +124,7 @@ $(document).ready(() => {
     }
   });
 
+  //Function to handle the toggling of the tweet visibility based on clicking the "new tweet" button.
   const toggleTweet = function() {
     let newTweet = $("#new-tweet");
 
