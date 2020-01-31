@@ -94,7 +94,10 @@ $(document).ready(() => {
 
 
   //Function that initiates the creation of the html for each tweet and then appends it to the page html.
+  const tweetContainer = $("#tweets-container");
+  
   const renderTweets = function(tweetsObjArr) {
+    tweetContainer.empty();
     tweetsObjArr.forEach((value) => {
       $("#tweets-container").prepend(createTweetElement(value));
     });
