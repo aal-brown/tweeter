@@ -68,7 +68,7 @@ $(document).ready(() => {
   const renderTweets = function(tweetsObjArr) {
     tweetsContainer.empty();
     tweetsObjArr.forEach((value) => {
-      $("#tweets-container").prepend(createTweetElement(value));
+      $("#tweets-container").append(createTweetElement(value));
     });
   };
 
