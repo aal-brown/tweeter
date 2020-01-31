@@ -45,18 +45,22 @@ $(document).ready(() => {
 
     let tweetTemplate = `
     <article class="tweets">
-    <header>
-      <div class="img-name">
-        <img src="${escape(tweetObj.user.avatars)}">
-        <span class="name tweets">${escape(tweetObj.user.name)}</span>
-      </div>
-      <span class="username tweets">${escape(tweetObj.user.handle)}</span>
-    </header>
-      <p><b>${escape(tweetObj.content.text)}</b></p>
-    <footer>
-      <span class="time tweets">${timeElapsed(tweetObj)}</span>
-      <span class="tweet tweets">W X Y Z</span>
-    </footer>
+      <header>
+        <div class="img-name">
+          <img src="${escape(tweetObj.user.avatars)}">
+          <span class="name tweets">${escape(tweetObj.user.name)}</span>
+        </div>
+        <span class="username tweets">${escape(tweetObj.user.handle)}</span>
+      </header>
+        <p><b>${escape(tweetObj.content.text)}</b></p>
+      <footer>
+        <span class="time tweets">${timeElapsed(tweetObj)}</span>
+        <div id="symbols">
+          <img src="https://img.icons8.com/ultraviolet/40/000000/good-quality.png">
+          <img src="https://img.icons8.com/office/40/000000/hummingbird.png">
+          <img src="https://img.icons8.com/officel/40/000000/empty-flag.png">
+        </div>
+      </footer>
     </article>
   `;
     return tweetTemplate;

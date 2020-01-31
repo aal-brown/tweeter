@@ -10,7 +10,7 @@ article.tweets {
   justify-content: space-between;
   width: 100%;
   border: solid;
-  border-width: 0.1em;
+  border-width: 0.2em;
   border-color: #545149;
   border-radius: 0.5em;
   margin-top: 2em;
@@ -19,16 +19,7 @@ article.tweets {
 
 }
 
-/* Responding to mouse-over */
-article.tweets:hover {
- box-shadow: 10px 10px 5px grey;
- text-shadow: 0.5px 0.5px #545149;
- opacity: 100%;
-}
 
-article.tweets:hover .username {
-  opacity: 1;
-}
 
 article.tweets header  {
   height: 4em;;
@@ -75,6 +66,27 @@ article.tweets footer  {
   border-top: solid;
   border-color:#545149;
   color: #545149;
-  border-width: 4px;
+  border-width: 0.1em;
   padding:16px;
+}
+
+footer #symbols {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+/* Responding to mouse-over */
+article.tweets:hover {
+  box-shadow: 10px 10px 5px grey;
+  text-shadow: 0.5px 0.5px #545149;
+  opacity: 1;
+ }
+ 
+ article.tweets:hover .username {
+   opacity: 1;
+ }
+
+ article.tweets:hover #symbols {
+  opacity: 1;
 }
