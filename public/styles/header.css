@@ -1,6 +1,4 @@
-/*  we relatively position the header to the page (since that is its parent element) and use 120px to match the height of the nav bar, thus not overlapping it.
-Since it is a block element, left and right probably aren't required for specifying the box-offset. Block elements by default fill the width of the page I think.
- */
+
 #page-header {
   display: flex;
   flex-direction: column;
@@ -8,7 +6,7 @@ Since it is a block element, left and right probably aren't required for specify
   justify-content: center;
   width: 45%;
   height: 400px;
-  /* background-color: #40b6ca; */
+  /* background-color: #40b6ca; leaving this here in case I want to use it again*/
   background-image: url("https://hbimg.huabanimg.com/15fa28bef6214099169cf5b55ed920f0a6e37158147b1-NhAjzT_fw658");
   background-repeat: no-repeat;
   background-size: cover ;
