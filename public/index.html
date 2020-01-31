@@ -47,13 +47,9 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
       <header id="page-header">
-        <div>
-            <img id="profile-img" src="/images/profile-hex.png"> 
-        </div>
+          <img id="profile-img" src="/images/robot-01.png"> 
         <br>
-        <div>
-            <span id="name"><b>Adlai</b> Brown</span>
-        </div>
+          <span id="name"><b>Adlai</b> Brown</span>
       </header id="page-header">
     <div id="contents">
       <section class="error-messages">
@@ -63,7 +59,7 @@
       </section>
       <section id="new-tweet">
         <form id="tweet-form" method="POST" action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?" rows="auto"></textarea>
+          <textarea name="text" placeholder="What's on your mind?" rows="auto"></textarea>
           <div name="button-and-counter">
             <input id="tweet-button" type="submit" value="Tweet">
           <span class="counter">140</span>
@@ -71,7 +67,7 @@
         </form>
       </section>
       <section id="tweets-container">
-        <!--New tweets will be added here  -->
+        <!--New tweets are added here  -->
       </section>
       <button id="scroll-button"><img src="/images/arrow-up.png"></img></button>
     </div>

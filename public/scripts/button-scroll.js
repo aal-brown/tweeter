@@ -1,7 +1,6 @@
 $(document).ready(() => {
   
   let scrollButton = $("#scroll-button");
-  
 
   const scrollFunction = function() {
 

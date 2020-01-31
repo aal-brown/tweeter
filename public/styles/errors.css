@@ -8,7 +8,6 @@ div.error-messages {
   display: flex;
   width: 100%;
   height: 70%;
-  /* display: none; */
   color: red;
   border-style: solid;
   border-color: red;

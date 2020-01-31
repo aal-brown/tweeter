@@ -4,9 +4,8 @@ display: none;
 width: 100%;
 }
 
-
 [name="text"] {
-  display: block; /* gets the other elements away from it, by having it take up the width */
+  display: block;
   width: 100%;
   border: transparent;
   border-bottom: solid; /* Overwrites the above transparent */
@@ -14,11 +13,10 @@ width: 100%;
   color: #545149;
   border-width: 0.1em;
   background-color: #f4f1ec;
-  margin-bottom: 0.5em; /* margin was the only way to move the lower elements */
+  margin-bottom: 0.5em;
   font-size: 1.5em;
   font-family: "Source Sans Pro: 700", sans-serif
 }
-
 
 [name="button-and-counter"] {
   display: flex;
@@ -39,7 +37,6 @@ width: 100%;
   transition-property: box-shadow;
   box-shadow: 0 0 0 2px #8095f3, 0 0 1px rgba(0, 0, 0, 0);
 }
-}
 
 .counter {
   font-family: "Bungee", sans-serif;
@@ -48,10 +45,4 @@ width: 100%;
 ::placeholder {
   opacity: 1;
   color:#545149;
-
 }
-
-/* .new-tweet {
-  display: flex;
-  flex-direction: column;
-} */

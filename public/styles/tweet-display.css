@@ -30,7 +30,6 @@ article.tweets:hover .username {
   opacity: 1;
 }
 
-
 article.tweets header  {
   height: 4em;;
   width: 100%;
@@ -44,7 +43,7 @@ article.tweets header  {
 .tweets p {
   width: 95%;
   text-align: left;
-  font-size: 0.5em;
+  font-size: 1em;
 }
 
 .img-name {
@@ -73,7 +72,7 @@ article.tweets footer  {
   height: 80px;
   width: 97.5%;
   border: transparent;
-  border-top: solid; /* Overwrites the above transparent */
+  border-top: solid;
   border-color:#545149;
   color: #545149;
   border-width: 4px;
