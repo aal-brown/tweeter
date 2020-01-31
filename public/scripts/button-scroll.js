@@ -7,13 +7,12 @@ $(document).ready(() => {
 
     if ($("html").scrollTop() > 647) {
       $("#tweet").css("display", "none");
-      
+
     } else {
       $("#tweet").css("display", "");
     }
   
     if ($("html").scrollTop() > 20) {
-      console.log("i'm in")
       scrollButton.css("display", "block");
 
     } else {

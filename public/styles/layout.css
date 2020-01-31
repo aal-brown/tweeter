@@ -24,9 +24,20 @@ body {
 
 .container {
   position: absolute;
-  top: 550px;
-  left: 5%;
-  right: 5%;
+  display: flex;
+  top: 5em;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+#contents {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
 }
 
 [name="main-text"] {
@@ -43,3 +54,4 @@ b {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
