@@ -98,6 +98,9 @@ $(document).ready(() => {
     para.html(message);
   };
 
+  //This function loads the new tweets as soon as the page loads
+  $(window).on("load", loadTweets());
+
 
   //This is the main function for posting new tweets and then getting the tweet data object.
   $("#tweet-form").on("submit", function(event) {
